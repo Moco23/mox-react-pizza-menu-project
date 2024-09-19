@@ -2,10 +2,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+// import css
+import "./index.css";
+
 // app component
 function App() {
   return (
-    <div>
+    <div className="container">
       <Header />
       <Menu />
       <Footer />
@@ -15,14 +18,14 @@ function App() {
 
 function Header() {
   return (
-    <header>
+    <header className="header">
       <h1>Fast React Pizza Co.</h1>
     </header>
   );
 }
 function Menu() {
   return (
-    <main>
+    <main className="menu">
       <Pizza />
       <Pizza />
       <Pizza />
@@ -39,7 +42,9 @@ function Footer() {
   const isOpen = hour >= openHour && hour <= closeHour;
 
   return (
-    <footer>{new Date().toLocaleTimeString()}. We're currently open </footer>
+    <footer className="footer">
+      {new Date().toLocaleTimeString()}. We're currently open{" "}
+    </footer>
   );
 }
 
