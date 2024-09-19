@@ -26,12 +26,12 @@ function Header() {
 function Menu() {
   return (
     <main className="menu">
-      <Pizza />
-      <Pizza />
-      <Pizza />
-      <Pizza />
-      <Pizza />
-      <Pizza />
+      <Pizza
+        pizzaName="Pizza Spinaci"
+        pizzaIngredients="Tomato, mozarella, spinach, and ricotta cheese"
+        pizzaPhotoUrl="pizzas/spinaci.jpg"
+        pizzaPrice="10"
+      />
     </main>
   );
 }
@@ -49,12 +49,13 @@ function Footer() {
 }
 
 // pizza component
-function Pizza() {
+function Pizza(props) {
   return (
     <article>
-      <img src="pizzas/spinaci.jpg" alt="Pizza Spinaci on the screen" />
-      <h3>Pizza Spinaci</h3>
-      <p>Tomato, mozarella, spinach, and ricotta cheese</p>
+      <img src={props.pizzaPhotoUrl} alt={props.pizzaName} />
+      <h3>{props.pizzaName}</h3>
+      <p>{props.pizzaIngredients}</p>
+      <p>{props.pizzaPrice}</p>
     </article>
   );
 }
