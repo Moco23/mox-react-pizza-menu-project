@@ -30,36 +30,36 @@ function Menu() {
         pizzaName="Pizza Spinaci"
         pizzaIngredients="Tomato, mozarella, spinach, and ricotta cheese"
         pizzaPhotoUrl="pizzas/spinaci.jpg"
-        pizzaPrice="10"
+        pizzaPrice={10}
       />
       <Pizza
         pizzaName="Focaccia"
         pizzaIngredients="Bread with italian olive oil and rosemary"
-        pizzaPrice="6"
+        pizzaPrice={7}
         pizzaPhotoUrl="pizzas/focaccia.jpg"
       />
       <Pizza
         pizzaName="Pizza Margherita"
         pizzaIngredients="Tomato and mozarella"
-        pizzaPrice="10"
+        pizzaPrice={10}
         pizzaPhotoUrl="pizzas/margherita.jpg"
       />
       <Pizza
         pizzaName="Pizza Funghi"
         pizzaIngredients="Tomato, mozarella, mushrooms, and onion"
-        pizzaPrice="12"
+        pizzaPrice={10}
         pizzaPhotoUrl="pizzas/funghi.jpg"
       />
       <Pizza
         pizzaName="Pizza Salamino"
         pizzaIngredients="Tomato, mozarella, and pepperoni"
-        pizzaPrice="15"
+        pizzaPrice={10}
         pizzaPhotoUrl="pizzas/salamino.jpg"
       />
       <Pizza
         pizzaName="Pizza Prosciutto"
         pizzaIngredients="Tomato, mozarella, ham, aragula, and burrata cheese"
-        pizzaPrice="18"
+        pizzaPrice={10}
         pizzaPhotoUrl="pizzas/prosciutto.jpg"
       />
     </main>
@@ -81,11 +81,13 @@ function Footer() {
 // pizza component
 function Pizza(props) {
   return (
-    <article>
+    <article className="pizza">
       <img src={props.pizzaPhotoUrl} alt={props.pizzaName} />
-      <h3>{props.pizzaName}</h3>
-      <p>{props.pizzaIngredients}</p>
-      <p>{props.pizzaPrice}</p>
+      <div>
+        <h3>{props.pizzaName}</h3>
+        <p>{props.pizzaIngredients}</p>
+        <span>{props.pizzaPrice}</span>
+      </div>
     </article>
   );
 }
