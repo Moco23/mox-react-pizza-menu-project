@@ -32,6 +32,36 @@ function Menu() {
         pizzaPhotoUrl="pizzas/spinaci.jpg"
         pizzaPrice="10"
       />
+      <Pizza
+        pizzaName="Focaccia"
+        pizzaIngredients="Bread with italian olive oil and rosemary"
+        pizzaPrice="6"
+        pizzaPhotoUrl="pizzas/focaccia.jpg"
+      />
+      <Pizza
+        pizzaName="Pizza Margherita"
+        pizzaIngredients="Tomato and mozarella"
+        pizzaPrice="10"
+        pizzaPhotoUrl="pizzas/margherita.jpg"
+      />
+      <Pizza
+        pizzaName="Pizza Funghi"
+        pizzaIngredients="Tomato, mozarella, mushrooms, and onion"
+        pizzaPrice="12"
+        pizzaPhotoUrl="pizzas/funghi.jpg"
+      />
+      <Pizza
+        pizzaName="Pizza Salamino"
+        pizzaIngredients="Tomato, mozarella, and pepperoni"
+        pizzaPrice="15"
+        pizzaPhotoUrl="pizzas/salamino.jpg"
+      />
+      <Pizza
+        pizzaName="Pizza Prosciutto"
+        pizzaIngredients="Tomato, mozarella, ham, aragula, and burrata cheese"
+        pizzaPrice="18"
+        pizzaPhotoUrl="pizzas/prosciutto.jpg"
+      />
     </main>
   );
 }
