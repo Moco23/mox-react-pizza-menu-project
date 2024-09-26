@@ -76,12 +76,14 @@ function Menu() {
       <h2>Our Pizza</h2>
 
       {/* pizza list */}
-      {numPizzas > 0 && (
+      {numPizzas > 0 ? (
         <ul className="pizzas">
           {pizzaData.map((pizza) => (
             <Pizza pizzaObj={pizza} key={pizza.name} />
           ))}
         </ul>
+      ) : (
+        <p>We're still working on our menu. Please come back later.</p>
       )}
       {/* <Pizza
         pizzaName="Pizza Spinaci"
@@ -130,13 +132,17 @@ function Footer() {
 
   return (
     <footer className="footer">
-      {isOpen && (
+      {isOpen ? (
         <div className="order">
           <p>
             We're open unitli {closeHour}: 00. Come visit us or order Online
           </p>
           <button className="btn">Order</button>
         </div>
+      ) : (
+        <p>
+          We're happy to welcome you between {openHour}:00 and {closeHour}:00.
+        </p>
       )}
     </footer>
   );
@@ -144,6 +150,8 @@ function Footer() {
 
 // pizza component
 function Pizza(props) {
+  if (props.pizzaObj.soldOut) return null;
+
   return (
     <article className="pizza">
       <li>
